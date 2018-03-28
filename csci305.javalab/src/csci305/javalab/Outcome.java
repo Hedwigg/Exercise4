@@ -4,6 +4,34 @@ public class Outcome {
 	public String first;
 	public String second;
 	
+	public Outcome(Lizard lizard, Element x) {
+		if (x.getName().equals("Paper"))
+		{
+			first = "Lizard Eats Paper";
+			second = "Win";
+		}else if (x.getName().equals("Spock"))
+		{
+			first = "Lizard poisons Spock";
+			second = "Win";
+		}else if(x.getName().equals())
+	}
+
+	public Outcome(Paper paper, Element x) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Outcome(Rock rock, Element x) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Outcome(Scissors scissors, Element x) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Outcome(Spock spock, Element x) {
+		// TODO Auto-generated constructor stub
+	}
+	
 }
 
 
@@ -21,6 +49,7 @@ Lizard eats Paper
 Paper disproves Spock
 Spock vaporizes Rock
 Rock crushes Scissors
+
 For a tie, you should output a string such as ``Rock equals Rock''.
 
 The second value the Outcome should contain the value of the round outcome:

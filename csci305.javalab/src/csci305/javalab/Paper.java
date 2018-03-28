@@ -9,8 +9,8 @@ public class Paper extends Element{
 
 	@Override
 	public String compareTo(Element x) {
-		// TODO Auto-generated method stub
-		return null;
+		Outcome outcome = new Outcome(this, x);
+		return outcome.first + outcome.second;
 	}
 
 }
