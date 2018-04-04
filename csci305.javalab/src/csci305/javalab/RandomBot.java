@@ -1,7 +1,12 @@
 package csci305.javalab;
 
-public class IterativeBot extends Player{
+import java.util.Random;
+
+public class RandomBot extends Player{
 	
+	
+	Random random = new Random();
+
 	Element [] options = new Element[5];
 	Rock rock = new Rock("Rock");
 	Paper paper = new Paper("Paper");
@@ -9,29 +14,21 @@ public class IterativeBot extends Player{
 	Lizard lizard = new Lizard("Lizard");
 	Spock spock = new Spock("Spock");
 	
-	private int iterator; 
-		
-	public IterativeBot(String inName) {
+	
+	public RandomBot(String inName) {
 		super(inName);
+		//initialize the options array.
 		options[0] = rock;
 		options[1] = paper;
 		options[2] = scissors;
 		options[3] = lizard;
 		options[4] = spock;
-		iterator = 0;
-		
 	}
 
 	@Override
 	public Element Play() {
-		if(iterator > 4)	//check if we need to reset/loop iterator
-		{
-			iterator = 0;
-		}
-		Element next = options[iterator];
-		iterator++;
-		return(next); //return the element next in line
-		
+		int ranNum = (int) (Math.random() * 5); 
+		Element move = options[ranNum];	//use random int to pick an Element
+		return move;
 	}
-
 }
