@@ -10,7 +10,7 @@ public class Paper extends Element{
 	@Override
 	public String compareTo(Element x) {
 		Outcome outcome = new Outcome(this, x);
-		return outcome.first + outcome.second;
+		return outcome.first + " -- " + outcome.second;
 	}
 
 }

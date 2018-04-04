@@ -10,6 +10,7 @@ public class Outcome {
 			case "Paper":
 				first = "Lizard Eats Paper";
 				second = "Win";
+				break;
 				
 			case "Spock":
 				first = "Lizard poisons Spock";
@@ -18,16 +19,20 @@ public class Outcome {
 			case "Rock":
 				first = "Lizard poisons Spock";
 				second = "Lose";
+				break;
 				
-			case "Sissors":
-				first = "Sissors decapitate Lizard";
+			case "Scissors":
+				first = "Scissors decapitate Lizard";
 				second = "Lose";
+				break;
 			case "Lizard":
 				first = "Lizard equals Lizard";
 				second = "Tie";
+				break;
 			default:
-				first = "error";
-				second = "error";
+				first = "Error "+ lizard.getName();
+				second = "error" + x.getName();
+				break;
 		}
 	}
 
@@ -37,51 +42,62 @@ public class Outcome {
 			case "Rock":
 				first = "Paper covers Rock";
 				second = "Win";
+				break;
 				
 			case "Spock":
 				first = "Paper disproves Spock";
 				second = "Win"; 
+				break;
 				
 			case "Lizard":
 				first = "Lizard eats Paper";
 				second = "Lose";
+				break;
 				
-			case "Sissors":
-				first = "Sissors cut Paper";
+			case "Scissors":
+				first = "Scissors cut Paper";
 				second = "Lose";
+				break;
 			case "Paper":
 				first = "Paper equals Paper";
 				second = "Tie";
+				break;
 			default:
-				first = "error";
-				second = "error";
+				first = "Error "+ paper.getName();
+				second = "error" + x.getName();
+				break;
 		}
 	}
 
 	public Outcome(Rock rock, Element x) {
 		switch(x.getName())
 		{
-			case "Sissors":
-				first = "Rock crushes Sissors";
+			case "Scissors":
+				first = "Rock crushes Scissors";
 				second = "Win";
+				break; 
 				
 			case "Lizard":
 				first = "Rock crushes Lizard";
 				second = "Win"; 
+				break;
 				
 			case "Paper":
 				first = "Paper covers Rock";
 				second = "Lose";
-				
+				break;
 			case "Spock":
 				first = "Spock vaporizes Rock";
 				second = "Lose";
+				break;
 			case "Rock":
 				first = "Rock equals Rock";
 				second = "Tie";
+				break;
 			default:
-				first = "error";
-				second = "error";
+				first = "Error "+ rock.getName();
+				second = "error" + x.getName();
+				break;
 		}
 	}
 
@@ -89,53 +105,64 @@ public class Outcome {
 		switch(x.getName())
 		{
 			case "Paper":
-				first = "Sissors cut Paper";
+				first = "Scissors cut Paper";
 				second = "Win";
+				break;
 				
 			case "Lizard":
-				first = "Sissors decapitate Lizard";
+				first = "Scissors decapitate Lizard";
 				second = "Win"; 
+				break;
 				
 			case "Rock":
-				first = "Rock crushes Sissors";
+				first = "Rock crushes Scissors";
 				second = "Lose";
+				break;
 				
 			case "Spock":
-				first = "Spock smashes Sissors";
+				first = "Spock smashes Scissors";
 				second = "Lose";
-			case "Sissors":
-				first = "Sissors equals Sissors";
+				break;
+			case "Scissors":
+				first = "Scissors equals Scissors";
 				second = "Tie";
+				break;
 			default:
-				first = "error";
-				second = "error";
+				first = "Error "+ scissors.getName();
+				second = "error" + x.getName();
+				break;
 		}
 	}
 
 	public Outcome(Spock spock, Element x) {
 		switch(x.getName())
 		{
-			case "Sissors":
-				first = "Spock smashes Sissors";
+			case "Scissors":
+				first = "Spock smashes Scissors";
 				second = "Win";
-				
+				break;
 			case "Rock":
 				first = "Spock vaporizes Rock";
-				second = "Win"; 
+				second = "Win";
+				break;
 				
 			case "Lizard":
 				first = "Lizard poisons Spock";
 				second = "Lose";
+				break;
 				
 			case "Paper":
 				first = "Paper disproves Spock";
 				second = "Lose";
+				break;
 			case "Spock":
 				first = "Spock equals Spock";
 				second = "Tie";
+				break;
 			default:
-				first = "error";
-				second = "error";
+				first = "Error "+ spock.getName();
+				second = "error" + x.getName();
+				break;
 		}
 	}
 	
